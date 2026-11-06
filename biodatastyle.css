@@ -1,0 +1,330 @@
+@font-face {
+    font-family: "Lonely Cake";
+    src: url("lonely_cake/Lonely Cake.ttf");
+}
+ 
+:root {
+    --pink: #ffc7d4;
+    --pink-muda: #ffe5ed;
+    --hotpink: rgb(255, 113, 182);
+    --cyan: rgb(181, 255, 255);
+    --kuning: rgb(255, 253, 180);
+    --kuning-muda: rgb(255, 255, 214);
+    --cream: #fffaf0;
+    --teal: rgb(19, 101, 146);
+}
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    background-image: url(pinkpolkadot.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: "Lonely Cake", sans-serif;
+}
+ 
+h1, h2, h3, h4, h5 {
+    font-family: "Lonely Cake", sans-serif;
+}
+ 
+.header {
+    background-color: #ffc7d4;
+    padding: 20px;
+    text-align: center;
+}
+ 
+.header h2 {
+    background-color: #feffe0;
+    color: #137596;
+    -webkit-text-fill-color: #137596;
+    font-family: 'Lonely Cake', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    border: 8px solid rgb(181, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    outline: none;
+    box-shadow: none;
+}
+ 
+@keyframes muncul {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
+body > h2, h3, h4, h5 {
+    background-color: var(--cyan);
+    color: var(--hotpink);
+    text-align: center;
+    font-size: 24px;
+    width: fit-content;
+    min-width: 40%;
+    margin: 50px auto 30px;
+    padding: 10px 40px;
+    border: 5px solid var(--cream);
+    border-radius: 50px;
+    box-shadow: 0 6px 0 var(--hotpink);
+}
+ 
+.topnav + h2 {
+    background-color: var(--pink-muda);
+    color: var(--teal);
+    font-size: 26px;
+    width: 80%;
+    margin: 40px auto 20px;
+    padding: 18px;
+    border: 6px solid var(--cream);
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(255, 113, 182, 0.35);
+}
+ 
+h1 {
+    background-color: var(--hotpink);
+    color: var(--cyan);
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 rgba(32, 98, 116, 0.4);
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 50px;
+    border: 6px solid var(--cream);
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(255, 113, 182, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+h1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(255, 113, 182, 0.55);
+}
+ 
+h1:active {
+    transform: scale(1.15);
+}
+ 
+div.biodata {
+    margin: 30px auto;
+    width: 75%;
+    max-width: 1100px;
+    background: linear-gradient(135deg, var(--kuning-muda), var(--pink-muda));
+    color: var(--teal);
+    padding: 30px;
+    border: 6px solid var(--cream);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(255, 113, 182, 0.3);
+}
+ 
+div.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+ 
+div.isi p {
+    background-color: var(--cream);
+    margin: 8px 0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+ 
+div.isi p:hover {
+    transform: translateX(10px);
+    background-color: var(--pink);
+}
+ 
+div.isi i {
+    color: var(--hotpink);
+    width: 22px;
+}
+ 
+div.foto {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 6px solid var(--cream);
+    box-shadow: 0 0 0 6px var(--hotpink), 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg);
+    transition: transform 0.4s ease;
+}
+ 
+div.foto:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+ 
+div.foto img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+ 
+div.foto img.top {
+    opacity: 1;
+    z-index: 2;
+}
+ 
+div.foto:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+ 
+div.foto img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+ 
+div.foto:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+ 
+img {
+    padding: 0;
+}
+ 
+div.makanan, div.minuman, div.Aktivitas, div.Artis {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 10px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+ 
+div.makanan > div,
+div.minuman > div,
+div.Aktivitas > div,
+div.Artis > div {
+    width: 210px;
+    padding: 12px 12px 5px;
+    border-radius: 20px;
+    background-color: var(--kuning);
+    color: var(--teal);
+    border: 5px solid var(--cream);
+    box-shadow: 0 8px 0 var(--hotpink), 0 12px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: muncul 0.8s ease backwards;
+}
+ 
+div.makanan > div:nth-child(2),
+div.minuman > div:nth-child(2),
+div.Aktivitas > div:nth-child(2),
+div.Artis > div:nth-child(2) {
+    background-color: var(--pink-muda);
+}
+ 
+div.makanan > div:nth-child(3),
+div.minuman > div:nth-child(3),
+div.Aktivitas > div:nth-child(3),
+div.Artis > div:nth-child(3) {
+    background-color: var(--cyan);
+}
+ 
+div.makanan > div:nth-child(odd),
+div.minuman > div:nth-child(odd),
+div.Aktivitas > div:nth-child(odd),
+div.Artis > div:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+ 
+div.makanan > div:nth-child(even),
+div.minuman > div:nth-child(even),
+div.Aktivitas > div:nth-child(even),
+div.Artis > div:nth-child(even) {
+    transform: rotate(2deg);
+}
+ 
+div.makanan > div:hover,
+div.minuman > div:hover,
+div.Aktivitas > div:hover,
+div.Artis > div:hover {
+    transform: translateY(-10px) rotate(0deg) scale(1.05);
+    box-shadow: 0 14px 0 var(--hotpink), 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+ 
+div.makanan img,
+div.minuman img,
+div.Aktivitas img,
+div.Artis img {
+    width: 180px;
+    height: 180px;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+ 
+div.makanan p,
+div.minuman p,
+div.Aktivitas p,
+div.Artis p {
+    margin: 10px 0 8px;
+    font-size: 18px;
+}
+
+div.playlist {
+    width: 70%;
+    max-width: 800px;
+    margin: 10px auto 40px;
+    padding: 15px;
+    background-color: var(--pink-muda);
+    border: 6px solid var(--cream);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 113, 182, 0.3);
+}
+ 
+div.playlist iframe {
+    display: block;
+}
+ 
+@media (max-width: 900px) {
+    div.content {
+        flex-direction: column;
+    }
+    div.biodata {
+        width: 85%;
+    }
+}
+ 
+@media (max-width: 600px) {
+    div.biodata {
+        width: 92%;
+        padding: 20px;
+    }
+    div.playlist {
+        width: 92%;
+    }
+    div.foto {
+        width: 220px;
+        height: 220px;
+    }
+    div.isi {
+        text-align: center;
+    }
+    body > h2, h3, h4, h5, h1, .topnav + h2 {
+        width: 85%;
+        min-width: 0;
+        padding: 10px 15px;
+    }
+}

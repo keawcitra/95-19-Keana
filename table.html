@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id" translate="no">
+<head>
+    <title>Tabel Nilai Siswa</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="header">
+        <h2>HEADER</h2>
+    </div>
+
+    <div class="topnav">
+       <a href="biodata.html">Biodata</a>
+       <a href="table.html">Table</a>
+       <a href="list.html">List</a>
+       <a href="STS-95-19-KEANA/sts_95_19.html">STS</a>
+   </div>
+
+    <h2 class="judul">Tabel Merge</h2>
+
+    <div class="baris-merge">
+
+        <div class="kolom-kiri">
+
+            <div class="info-merge">
+                <p class="info-judul">Tahukah Kamu?</p>
+                <p><b>colspan</b> = sel melebar ke samping</p>
+                <p><b>rowspan</b> = sel memanjang ke bawah</p>
+            </div>
+
+            <div class="info-merge">
+                <p class="info-judul">Keterangan</p>
+                <div class="keterangan">
+                    <span class="contoh contoh-cyan"></span>
+                    <p>Sel biasa</p>
+                </div>
+                <div class="keterangan">
+                    <span class="contoh contoh-kuning"></span>
+                    <p>Sel warna muda</p>
+                </div>
+                <div class="keterangan">
+                    <span class="contoh contoh-pink"></span>
+                    <p>Sel saat di-hover</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="kartu-merge">
+            <table class="merge">
+                <tr>
+                    <td rowspan="3">1</td>
+                    <td colspan="2">2</td>
+                    <td colspan="2">3</td>
+                    <td rowspan="4">4</td>
+                    <td rowspan="4">5</td>
+                    <td rowspan="2">6</td>
+                    <td rowspan="6">7</td>
+                </tr>
+                <tr>
+                    <td class="muda">8</td>
+                    <td class="muda">9</td>
+                    <td class="muda" colspan="2">10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td rowspan="3">15</td>
+                </tr>
+                <tr>
+                    <td class="muda" colspan="5">16</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">17</td>
+                    <td colspan="2">18</td>
+                    <td rowspan="2">19</td>
+                    <td colspan="3">20</td>
+                </tr>
+                <tr>
+                    <td class="muda">21</td>
+                    <td class="muda">22</td>
+                    <td class="muda" colspan="4">23</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <h2 class="judul">Tabel Nilai Siswa</h2>
+
+    <div class="kartu-tabel">
+        <table>
+            <tr>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Nama Siswa</th>
+                <th rowspan="2">Mata Pelajaran</th>
+                <th colspan="2">Nilai</th>
+            </tr>
+            <tr>
+                <th>Ulangan 1</th>
+                <th>Ulangan 2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Jenny</td>
+                <td>IPA</td>
+                <td><span class="sempurna">100</span></td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Laila</td>
+                <td>Kesenian</td>
+                <td>80</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Manda</td>
+                <td>Matematika</td>
+                <td>66</td>
+                <td>86</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Keisha</td>
+                <td>Penjas</td>
+                <td><span class="sempurna">100</span></td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Ellena</td>
+                <td>TIK</td>
+                <td>96</td>
+                <td><span class="sempurna">100</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Keana 95/19</p>
+    </div>
+</body>
+</html>

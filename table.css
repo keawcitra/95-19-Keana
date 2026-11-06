@@ -1,0 +1,315 @@
+@font-face {
+    font-family: "Lonely Cake";
+    src: url("lonely_cake/Lonely Cake.ttf");
+}
+
+:root {
+    --pink: #ffc7d4;
+    --pink-muda: #ffe5ed;
+    --hotpink: rgb(255, 113, 182);
+    --cyan: rgb(181, 255, 255);
+    --cyan-muda: #e4ffff;
+    --kuning: rgb(255, 254, 211);
+    --kuning-muda: rgb(255, 255, 214);
+    --cream: #fffaf0;
+    --teal: rgb(32, 98, 116);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(pinkpolkadot.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: "Lonely Cake", sans-serif;
+}
+
+.header {
+    background-color: #ffc7d4;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h2 {
+    background-color: #feffe0;
+    color: #137596;
+    -webkit-text-fill-color: #137596;
+    font-family: "Lonely Cake", sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    border: 8px solid rgb(181, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ffffe0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: hotpink;
+    font-family: "Lonely Cake", sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:visited {
+    color: hotpink;
+}
+
+.topnav a:hover,
+.topnav a:active,
+.topnav a.active {
+    background-color: rgb(187, 255, 249);
+    color: hotpink;
+}
+
+h2.judul {
+    background-color: var(--hotpink);
+    color: var(--cyan);
+    font-family: "Lonely Cake", sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(32, 98, 116, 0.4);
+    width: fit-content;
+    margin: 40px auto 30px;
+    padding: 12px 50px;
+    border: 6px solid var(--cream);
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(255, 113, 182, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2.judul:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(255, 113, 182, 0.55);
+}
+
+h2.judul:active {
+    transform: scale(1.15);
+}
+
+.kartu-tabel {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    background-color: var(--cream);
+    border: 6px solid var(--cream);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 113, 182, 0.3);
+    overflow-x: auto; 
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    min-width: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 3px solid var(--cream);
+    border-right: 3px solid var(--cream);
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+th {
+    background-color: var(--kuning);
+    color: var(--teal);
+    font-family: "Lonely Cake", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+td {
+    color: var(--teal);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 17px;
+    transition: background-color 0.2s ease;
+}
+
+tr:nth-child(odd) td {
+    background-color: var(--pink-muda);
+}
+
+tr:nth-child(even) td {
+    background-color: var(--cyan-muda);
+}
+
+tr:hover td {
+    background-color: var(--kuning-muda);
+}
+
+td:nth-child(2) {
+    font-family: "Lonely Cake", sans-serif;
+    font-size: 19px;
+}
+
+.sempurna {
+    display: inline-block;
+    background-color: var(--hotpink);
+    color: white;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
+
+.sempurna:hover {
+    transform: scale(1.15);
+}
+
+.kartu-merge {
+    width: fit-content;
+    max-width: 92%;
+    margin: 0 auto 40px;
+    padding: 15px;
+    background-color: var(--cream);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 113, 182, 0.3);
+    overflow-x: auto;
+}
+
+table.merge {
+    width: auto;
+    min-width: 0;
+    background-color: var(--hotpink);
+    border-spacing: 5px;
+    border-radius: 15px;
+}
+
+table.merge td {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cyan);
+    color: var(--hotpink);
+    font-family: "Lonely Cake", sans-serif;
+    font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+table.merge td.muda {
+    background-color: var(--kuning);
+    color: var(--teal);
+}
+
+table.merge td:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+.baris-merge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 90%;
+    margin: 0 auto 40px;
+}
+
+.baris-merge .kartu-merge {
+    margin: 0;
+}
+
+.kolom-kiri {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 260px;
+    max-width: 90%;
+}
+
+.info-merge {
+    background-color: var(--cyan-muda);
+    border: 6px solid var(--cream);
+    border-radius: 25px;
+    padding: 15px 20px;
+    text-align: center;
+    color: var(--teal);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 8px 0 var(--hotpink), 0 12px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.info-merge:hover {
+    transform: translateY(-6px);
+}
+
+.info-merge p {
+    margin: 6px 0;
+}
+
+.info-merge .info-judul {
+    font-family: "Lonely Cake", sans-serif;
+    color: var(--hotpink);
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.info-merge b {
+    color: var(--hotpink);
+}
+
+/* Keterangan warna */
+.keterangan {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+    text-align: left;
+}
+
+.contoh {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 3px solid var(--hotpink);
+    flex-shrink: 0;
+}
+
+.contoh-cyan   { background-color: var(--cyan); }
+.contoh-kuning { background-color: var(--kuning); }
+.contoh-pink   { background-color: var(--pink); }
+
+.footer {
+    background-color: #ffffd1;
+    color: rgb(78, 31, 31);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .kartu-tabel {
+        width: 92%;
+    }
+    h2.judul {
+        width: 85%;
+        padding: 10px 15px;
+    }
+}
